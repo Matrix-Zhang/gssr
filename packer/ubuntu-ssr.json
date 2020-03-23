@@ -1,0 +1,22 @@
+{
+  "builders": [
+    {
+      "type": "googlecompute",
+      "account_file": "<YOUR ACCOUNT FILE>",
+      "project_id": "<YOUR PROJECT ID>",
+      "source_image": "ubuntu-1804-bionic-v20200218",
+      "ssh_username": "root",
+      "zone": "asia-east1-b",
+      "labels": {
+        "usage": "ssr"
+      },
+      "image_name": "<YOUR IMAGE NAME>"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "script": "ssserver.sh"
+    }
+  ]
+}
