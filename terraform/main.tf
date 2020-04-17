@@ -45,8 +45,8 @@ resource "google_compute_instance" "terraform_ssr_vm" {
   }
 
   metadata = {
-    startup-script = "ssserver --server-addr 0.0.0.0:${var.ssr_port} --encrypt-method ${var.encrypt_methon} --password ${var.ssr_password}"
-    ssh-keys       = "${var.ssh_name}:${file(var.public_key)}"
+    startup-script = "ssserver --server-addr 0.0.0.0:${var.ssr_port} --encrypt-method ${var.ssr_encrypt_method} --password ${var.ssr_password}"
+    ssh-keys       = "${var.ssh_name}:${file(var.ssh_public_key)}"
   }
 
   network_interface {

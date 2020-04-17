@@ -31,13 +31,13 @@ variable "image_id" {
 variable "machine_type" {
   description = "The vm machine_type"
   type        = string
-  default     = "e2-standard-4"
+  default     = "f1-micro"
 }
 
 variable "ssh_name" {
   description = "The user mame to login with ssh"
   type        = string
-  default     = "<YOUR SSH PUBLIC KEY PATH>"
+  default     = "<YOUR SSH USER NAME>"
 }
 
 variable "ssh_public_key" {
